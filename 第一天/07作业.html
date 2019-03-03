@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 交换变量：两种方式
+        var a=10;
+        var b=20;
+        var tmp=a;
+        a=b;
+        b=tmp;
+        console.log(a,b);
+
+        var c=30
+        var d=40
+        var c=c+d;//30
+        d=c-d;
+        c=c-d;
+        console.log(c,d);
+
+        //类型转换
+        //parseInt()
+        //parseFloat()
+        //Number()
+        //.toString()
+        //String()
+        // Boolean
+        console.log(parseInt("10"));
+        console.log(parseInt("10.98"));
+        console.log(parseInt("g23"));
+        console.log(parseInt("23ggg"));
+        console.log(parseInt("2sasa3"));
+
+        console.log(parseFloat("10"));
+        console.log(parseFloat("10.98"));
+        console.log(parseFloat("g23"));
+        console.log(parseFloat("23ggg"));
+        console.log(parseFloat("2sasa3"));
+
+        console.log(Number("10"));
+        console.log(Number("10.98"));
+        console.log(Number("g23"));
+        console.log(Number("23ggg"));
+        console.log(Number("2sasa3"));
+        console.log("------------------")
+
+        var sum=10;
+        var sum1=null;
+        console.log(sum.toString());
+        //console.log(sum1.toString());  没有意义    报错
+        console.log("----------------")
+
+        console.log(String(sum));
+        console.log(String(sum1));
+
+
+        console.log("--------------")
+        console.log(Boolean(1));
+        console.log(Boolean(0));
+        console.log(Boolean(11));
+        console.log(Boolean(""));
+        console.log(Boolean("hehe"));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
