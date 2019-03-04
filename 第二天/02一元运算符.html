@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        ++   --
+        可分为：前+ 后+    前- 后-
+        
+        
+        
+        
+        */
+        var num = 10;
+        num++;//自身加一
+        console.log(num);
+        console.log("-----------");
+
+        var num1 = 10;
+        var sum = num1++ + 10;
+        console.log(sum);//20
+        console.log(num1);//11
+        //num1 先参与运算， 运算结束后自身再加1
+        console.log("---------------");
+
+        var num2 = 10;
+        var sum1 = ++num2 + 10;//先加1，再参与运算
+        console.log(sum1);//21
+        console.log(num2);//11
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

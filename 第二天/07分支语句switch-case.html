@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        switch-case语句---多分支语句
+
+        语法：
+            switch(表达式){
+                case 值1:代码1;
+                break;
+                case 值2:代码2;
+                break;
+                case 值3:代码3;
+                break;
+                case 值4:代码4;
+                break;
+                .
+                .
+                .
+                default :代码5;
+                break;
+            }
+        */
+        /*
+        注意问题
+            default后面的break是可以省略的
+            default也可以省略
+
+            switch-case 语句中和case后面的值比较时使用的是严格模式
+        
+            也有case穿透
+        */
+        //根据月份显示对应的天数
+        /*
+        1、3、5、7、8、10、12----31天
+        2----28天
+        4、6、9、11----30天
+        */
+        var month = Number(prompt("请输入月份"));
+        switch (month) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12: console.log("31天"); break;
+
+            case 2: console.log("28天"); break;
+
+            case 4:
+            case 6:
+            case 9:
+            case 11: console.log("30天"); break;
+            default: console.log("你输入的月份有误");
+        }
+
+        //判断月份是什么季节
+        // var jijie = Number(prompt("请输入月份"));
+        // switch (jijie) {
+        //     case 1:
+        //         console.log("冬季");
+        //         break;
+        //     case 2: console.log("冬季");
+        //         break;
+        //     case 3: console.log("春季");
+        //         break;
+        //     case 4: console.log("春季");
+        //         break;
+        //     case 5: console.log("春季");
+        //         break;
+        //     case 6: console.log("夏季");
+        //         break;
+        //     case 7: console.log("夏季");
+        //         break;
+        //     case 8: console.log("夏季");
+        //         break;
+        //     case 9: console.log("秋季");
+        //         break;
+        //     case 10: console.log("秋季");
+        //         break;
+        //     case 11: console.log("秋季");
+        //         break;
+        //     case 12: console.log("冬季");
+        //         break;
+        //     default: console.log("您输入的月份有误")
+        // }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

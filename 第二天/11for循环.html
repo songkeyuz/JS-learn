@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        for循环语法
+            for(表达式1;表达式2;表达式3){
+                循环体
+            }
+        */
+
+        //例子   输出10次  我很帅
+        for (var i = 0; i < 10; i++) {
+            console.log("我很帅" + i);
+        }
+
+        //求1-100之间所有偶数的和
+        var sum = 0;
+        for (var i = 1; i <= 100; i++) {
+            if (i % 2 == 0) {
+                sum += i;
+            }
+        }
+        console.log(sum);
+
+
+        //求1-100之间所有奇数的和
+        var sum1 = 0;
+        for (var i1 = 1; i1 <= 100; i1++) {
+            if (i1 % 2 != 0) {
+                sum1 += i1;
+            }
+        }
+        console.log(sum1);
+
+        //求1-100之间所有能被3整除的数字的和
+        var sum2 = 0;
+        for (var i2 = 1; i2 <= 100; i2++) {
+            if (i2 % 3 == 0) {
+                sum2 += i2;
+            }
+        }
+        console.log(sum2);
+
+        //求1-100之间所有能被7整除的数字的和
+        var sum3 = 0;
+        for (var i3 = 1; i3 <= 100; i3++) {
+            if (i3 % 7 == 0) {
+                sum3 += i3;
+            }
+        }
+        console.log(sum3);
+
+
+
+        //控制行数的
+        for (var j = 0; j <= 5; j++) {
+            //控制循环的
+            for (var k = 0; k <= j; k++) {
+                //在网页上面输出
+                document.write("❤");
+            }
+            document.write("<br/>");//换行
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

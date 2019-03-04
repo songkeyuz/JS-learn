@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        //本金10000元存入银行，年利率是千分之三，每过1年，本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        var bj = 10000;
+        for (var i = 1; i <= 5; i++) {
+            bj = bj + bj * 0.003;
+        }
+        console.log(bj);
+
+        //有个人想知道，一年之内一对兔子能繁殖多少对？于是就筑了一道围墙把一对兔子关在里面。已知一对兔子每个月
+        //可以生一对小兔子，而一对兔子从出生后第三个月起每月生一对小兔子。假如一年内没有发生死亡现象，那么，一对兔子一年内（12个月）
+        //能繁殖成多少对？  1、1、2、3、5、8、13、21
+        var num1 = 1;
+        var num2 = 1;
+        var sum = 0;
+        for (var j = 3; j <= 12; j++) {
+            sum = num1 + num2;
+            //依次替换上个月和上上个月的兔子数
+            num1 = num2;
+            num2 = sum;
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
