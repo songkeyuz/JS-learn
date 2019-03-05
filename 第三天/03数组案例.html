@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        //for循环遍历数组
+        var arr = [10, 20, 30, 40, 50];
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+
+        //案例1：求数组中所有元素的和
+
+        var arr1 = [10, 20, 30, 40, 50];
+        var sum = 0;
+        for (var i1 = 0; i1 < arr1.length; i1++) {
+            sum += arr1[i1];
+        }
+        console.log(sum);
+
+        //案例2：求数组中所有元素的平均值
+
+        var arr2 = [1, 2, 3, 4, 5];
+        var sum2 = 0;
+        var avg2 = 0;
+        for (var i2 = 0; i2 < arr2.length; i2++) {
+            sum2 += arr2[i2];
+        }
+        avg2 = sum2 / arr2.length;
+        console.log(avg2);
+
+        //案例3：求数组中所有元素的最大值
+
+        var arr3 = [1, 3, 2, 5, 10, 100, 50];
+        var max3 = arr3[0];
+        for (var i3 = 0; i3 < arr3.length; i3++) {
+            if (max3 < arr3[i3]) {
+                max3 = arr3[i3];
+            }
+        }
+        console.log("最大值:" + max3);
+
+        //案例4：求数组中所有元素的最小值
+
+        var arr4 = [6, 3, 2, 5, 10, , 1, 100, 50];
+        var min4 = arr4[0];
+        for (var i4 = 0; i4 < arr4.length; i4++) {
+            if (min4 > arr4[i4]) {
+                min4 = arr4[i4];
+            }
+        }
+        console.log("最小值:" + min4);
+
+        //案例5：倒序循环遍历数组
+
+        var arr5 = [1, 2, 3, 4, 5, 6, 7];
+        //正序
+        // for (var i5 = 0; i5 < arr5.length; i5++) {
+        //     console.log(arr5[i5]);
+        // }
+
+        //倒序
+        for (var i5 = arr5.length - 1; i5 >= 0; i5--) {
+            console.log(arr5[i5]);
+        }
+
+        //案例6：把数组中的每个元素用|拼接到一起产生一个字符串并输出
+
+        var names = ["卡卡西", "佐助", "鸣人", "大蛇丸", "雏田", "我爱罗", "宇智波鼬", "自来也"];
+        var str = "";
+        for (var i6 = 0; i6 < names.length - 1; i6++) {
+            str += names[i6] + "|";
+        }
+        console.log(str + names[names.length - 1]);
+
+
+        //案例7：去掉数组中重复的0,把其他的数据放在一个新的数组中
+
+        var arr7 = [10, 0, 20, 0, 30, 0, 40];
+        var newArr = [];
+        for (var i7 = 0; i7 < arr7.length; i7++) {
+            if (arr7[i7] != 0) {
+                newArr[newArr.length] = arr7[i7];
+            }
+        }
+        console.log(newArr);
+        //案例8：反转数组
+
+        var arr8 = [10, 20, 30, 40, 50, 60];
+        //循环的目的是控制交换的次数
+        for (var i8 = 0; i8 < arr8.length / 2; i8++) {
+            var tmp = arr8[i8];
+            arr8[i8] = arr8[arr8.length - 1 - i8];
+            arr8[arr8.length - 1 - i8] = tmp;
+        }
+        console.log(arr8);
+
+        //案例9：提示用户输入班级人数，求总成绩，平均值，最高分，最低分
+
+        //提示用户输入人数，并转成数字类型
+        var perCount = parseInt(prompt("请输入班级人数"));
+        //定义数组存储班级的每个人的成绩
+        var perScorse = [];
+        //循环的方式录入每个人的成绩
+        for (var i9 = 0; i9 < perCount; i9++) {
+            //把每个人的成绩存储到数组中
+            perScorse[perScorse.length] = parseInt(prompt("请输入第" + (i9 + 1) + "个人的成绩"));
+        }
+        console.log(perScorse);
+        //求总成绩
+        var sum9 = 0;
+        for (var j = 0; j < perScorse.length; j++) {
+            sum9 += perScorse[j];
+        }
+        console.log(sum9);
+        //求平均分
+        for (var j1 = 0; j1 < perScorse.length; j1++) {
+            var avg9 = 0;
+            avg9 = sum9 / perScorse.length;
+        }
+        console.log(avg9);
+        //求最大值
+        var max9 = perScorse[0];
+        for (var j2 = 0; j2 < perScorse.length; j2++) {
+            if (max9 < perScorse[j2]) {
+                max9 = perScorse[j2];
+            }
+        }
+        console.log(max9);
+        //求最小值
+        var min9 = perScorse[0];
+        for (var j3 = 0; j3 < perScorse.length; j3++) {
+            if (min9 > perScorse[j3]) {
+                min9 = perScorse[j3];
+            }
+        }
+        console.log(min9);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

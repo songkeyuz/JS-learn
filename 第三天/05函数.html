@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        函数：把一堆重复的代码封装，在需要的时候直接调用即可
+            作用：代码的重用
+
+            语法：
+            function  函数名字(){
+                函数体-----一堆重复的代码
+            }
+
+            调用:
+                函数名();
+        */
+        /*
+        函数需要先定义，然后才能使用
+        函数名字：要遵循驼峰命名法
+        函数一旦重名，后面的会把前面的覆盖
+        
+        */
+        //求三个数字的最大值
+        function consoleMax() {
+            var x = 10;
+            var y = 20;
+            var z = 30;
+            var max = x > y ? (x > z ? x : z) : (y > z ? y : z);//尽量不要用
+            console.log(max);
+        }
+
+        consoleMax();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

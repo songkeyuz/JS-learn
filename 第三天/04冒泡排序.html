@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        //冒泡排序：把所有的数据按照一定的顺序进行排列(从小到大，从大到小)
+        var arr = [1, 23, 46, 8, 7, 15, 41, 59, 6, 74, 97];
+        //循环控制比较的轮数
+        for (var i = 0; i < arr.length - 1; i++) {
+            //循环控制每一轮的比较次数
+            for (var j = 0; j < arr.length - 1 - i; j++) {
+                //<从大到小    >从小到大
+                if (arr[j] < arr[j + 1]) {
+                    var tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+    <img src="冒泡排序.png" alt="">
+</body>
+
+</html>
