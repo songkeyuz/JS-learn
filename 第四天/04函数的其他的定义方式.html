@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        命名函数：函数如果有名字，就是命名函数
+        匿名函数：函数没有名字
+
+        函数的另一种定义方式
+        函数表达式：
+            把一个函数给一个变量，此时形成了函数表达式
+            var 变量=匿名函数；
+            例：
+                var f1=function (){
+                    函数体;
+                };
+
+            如果是函数表达式，那么此时前面的变量中存储的就是一个函数，而这个变量就相当于是一个函数
+
+            调用：
+            f1();
+
+            注意：
+                函数表达式后面，赋值结束后，要加分号
+        
+        */
+
+        //函数的自调用，没有名字
+        (function () { console.log("kakaxi") })();//一次性的
+
+        //函数声明
+        function f1() {
+            console.log("你好帅");
+        }
+        f1();
+
+        function f1() {
+            console.log("我好帅");
+        }
+        f1();
+
+        //函数表达式
+        var f2 = function () {
+            console.log("你好");
+        };
+        f2();
+
+        f2 = function () {
+            console.log("我也好");
+        };
+        f2();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

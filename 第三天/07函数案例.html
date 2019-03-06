@@ -46,8 +46,21 @@
 
         var num = parseInt(prompt("请输入一个数字"));
         function getPN(num) {
+            for (var i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
         }
+        // console.log(getPN(num) ? "是质数" : "不是质数");
 
+        var result = getPN(num);
+        if (result) {
+            console.log("这个数是质数");
+        } else {
+            console.log("这个数不是质数");
+        }
 
     </script>
 </head>

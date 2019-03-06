@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        //求斐波那契数列，1，1，2，3，5，8，13，21
+        // function getFib(num) {
+        //     var num1 = 1;
+        //     var num2 = 1;
+        //     var sum = 0;
+        //     for (var i = 3; i <= num; i++) {
+        //         sum = num1 + num2;
+        //         num1 = num2;
+        //         num2 = sum;
+        //     }
+        //     return sum;
+        // }
+        // var num = parseInt(prompt("请输入一个数字"));
+        // console.log(getFib(num));
+
+
+        //输入年，月，日，获取这个日期是这一年的第多少天
+
+        //判断是不是闰年
+        function isLeapYear(year) {
+            return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
+        }
+        function getDays(year, month, day) {
+            //定义变量存储对应天数
+            var days = day;
+            //如果是一月就没必要计算后面的天数
+            if (month == 1) {
+                return days;
+            }
+            //如果不是一月就要累加后面的月
+            //定义一个数组存储每个月的天数
+            var months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+            //小于的是输入的月份
+            for (var i = 0; i < month - 1; i++) {
+                days += months[i];
+            }
+            //判断是不是闰年
+            if (isLeapYear(year) && month > 2) {
+                days++;
+            }
+            return days;
+        }
+        var year = parseInt(prompt("请输入年份"));
+        var month = parseInt(prompt("请输入月份"));
+        var day = parseInt(prompt("请输入日期"));
+        console.log(getDays(year, month, day));
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

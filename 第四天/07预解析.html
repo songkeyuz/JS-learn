@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        预解析：提前解析代码
+            把变量的声明提前了----提前到当前所在的作用域的最上面
+            把函数的声明也提前了---提前到当前所在的作用域的最上面
+        
+        */
+        //把声明变量提前了
+        console.log(num);//没有报错----undefined
+        var num = 10;
+
+        f1();//undefined  先声明函数和num，但没有赋值，  调用函数------赋值
+        var num = 20;
+        function f1() {
+            console.log(num);
+            //var num=10;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function f1() {
+            console.log("我是函数");
+        }
+        //如何获取某个变量的类型    typeof
+        console.log(typeof f1);//function类型
+
+
+        //函数作为参数使用
+        //只要看到了一个函数作为参数使用了，那就是回调函数
+        function sayHi(fn) {
+            console.log("你好啊");
+            fn();
+        }
+        function say() {
+            console.log("一半一半");
+        }
+        sayHi(say);
+
+
+        //函数作为返回值使用
+        function f() {
+            console.log("命名函数f");
+            return function () {
+                console.log("匿名函数");
+            }
+        }
+        var ff = f();
+        ff();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

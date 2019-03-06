@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        /*
+        预解析中，变量的提升只会在当前作用域中
+        预解析会分段（多对script标签中的函数重名，预解析的时候不会冲突 不会覆盖）
+        
+        */
+
+        function f1() {
+            console.log(num);
+            var num = 10;
+        }
+        f1();//undefined  num声明提前  没有赋值
+        // console.log(num);//报错  num声明只会提前到函数内部声明
+
+        f2();
+        console.log(c);// 9   相当于隐式全局变量
+        console.log(b);// 9   相当于隐式全局变量
+        console.log(a);//报错
+        function f2() {
+            var a = b = c = 9;//   var a;    a=9;  b=9;  c=9;
+            console.log(a);//9
+            console.log(b);//9
+            console.log(c);//9
+        }
+
+        f3();//报错  不能调用  只会提前 var f3;
+        var f3 = function () {
+            console.log(a);
+            var a = 10;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

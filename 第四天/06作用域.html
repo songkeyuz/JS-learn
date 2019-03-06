@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        //作用域：使用范围
+
+        /*
+        全局变量：声明的变量是使用var声明的，那么这个变量就是全局变量，可以在页面任何位置使用
+        局部变量：在函数内部定义的变量，外面不能使用
+
+        全局作用域：全局变量使用的范围（不能被删除的）
+        局部作用域：局部变量使用的范围
+
+        块级作用域：一对大括号就可以看成是一块，在这块区域中定义的变量只能在这个区域使用
+                在js中没有块级作用域
+        
+        隐式全局变量：声明的变量没有var
+                    能被删除
+                    在方法里面的，也能被外面访问
+        */
+
+        /*
+        作用域链：
+            在当前作用域在参数值，如果没有就找上一级，全部没有就报错
+
+        */
+        var num = 10;
+        function f1() {
+            var num = 20;
+            function f2() {
+                var num = 30;
+                function f3() {
+                    var num = 40;
+                    console.log(num);//需要参数num
+                }
+                f3();
+            }
+            f2();
+        }
+
+        f1();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
