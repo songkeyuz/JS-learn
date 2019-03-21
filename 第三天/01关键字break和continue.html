@@ -9,21 +9,39 @@
 
     <script>
         /*
-        break关键字：
-            如果在循环中使用，遇到了break，则立刻跳出当前所在的循环
-        
-        continue关键字：
-            在循环中遇到continue，则直接开始下一次循环
-        
-        */
+                                                                                break关键字：
+                                                                                    如果在循环中使用，遇到了break，则立刻跳出当前所在的循环
+                                                                                
+                                                                                continue关键字：
+                                                                                    在循环中遇到continue，则直接开始下一次循环
+                                                                                
+                                                                                */
 
         for (var i = 0; i < 10; i++) {
             while (true) {
                 console.log("哈哈");
-                break;//跳出当前while循环
+                break; //跳出当前while循环
             }
         }
         console.log("我出来了");
+
+        //break 
+        for (i = 0; i < 10; i++) {
+            if (i == 5) {
+                break;
+            }
+            document.write("i=" + i + "</br> ");
+        }
+        document.write("------------------" + "</br>")
+            // continue
+        for (i = 0; i < 10; i++) {
+            if (i == 5) {
+                continue;
+            }
+            document.write("i=" + i + "</br>");
+        }
+
+
 
         //找到100到200之间第一个能被7整除的数
         for (var i = 100; i <= 200; i++) {
