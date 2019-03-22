@@ -9,17 +9,17 @@
 
     <script>
         /*
-        函数：把一堆重复的代码封装，在需要的时候直接调用即可
-            作用：代码的重用
+                                                                                函数：把一堆重复的代码封装，在需要的时候直接调用即可
+                                                                                    作用：代码的重用
 
-            语法：
-            function  函数名字(){
-                函数体-----一堆重复的代码
-            }
+                                                                                    语法：
+                                                                                    function  函数名字(){
+                                                                                        函数体-----一堆重复的代码
+                                                                                    }
 
-            调用:
-                函数名();
-        */
+                                                                                    调用:
+                                                                                        函数名();
+                                                                                */
         /*
         函数需要先定义，然后才能使用
         函数名字：要遵循驼峰命名法
@@ -31,16 +31,29 @@
             var x = 10;
             var y = 20;
             var z = 30;
-            var max = x > y ? (x > z ? x : z) : (y > z ? y : z);//尽量不要用
+            var max = x > y ? (x > z ? x : z) : (y > z ? y : z); //尽量不要用
             console.log(max);
         }
 
         consoleMax();
     </script>
+
+
+    <!-- 函数在html中的调用 -->
+
+    <script>
+        var a = parseInt(prompt("请输入第一个数字"));
+        var b = parseInt(prompt("请输入第二个数字"));
+
+        function demo(a, b) {
+            var sum = a + b;
+            alert(sum);
+        }
+    </script>
 </head>
 
 <body>
-
+    <button onclick="demo(a,b)">数字的和</button>
 </body>
 
 </html>

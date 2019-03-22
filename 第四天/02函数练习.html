@@ -30,6 +30,7 @@
         function isLeapYear(year) {
             return year % 4 == 0 && year % 100 != 0 || year % 400 == 0;
         }
+
         function getDays(year, month, day) {
             //定义变量存储对应天数
             var days = day;
@@ -54,7 +55,6 @@
         var month = parseInt(prompt("请输入月份"));
         var day = parseInt(prompt("请输入日期"));
         console.log(getDays(year, month, day));
-
     </script>
 </head>
 
